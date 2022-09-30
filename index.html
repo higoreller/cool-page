@@ -22,21 +22,34 @@
           </ul>
         </nav>
       </header>
-      <section class="division">
-        <div class="division-container">
-          <div class="division-img division-content-1"></div>
-          <div class="division-img division-content-2"></div>
+      <section class="cards">
+        <div class="card">
+          <div class="card-content">
+            <h2>Conselhos</h2>
+            <p>Escute os melhores conselhos do mestre dos magos</p>
+            <a href="#hero">Receber conselhos</a>
+          </div>
+          <img src="content/img/cards/mestredosmagos.png" class="card-img" alt="Mestre dos Magos">
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <h2>Frases do Chuck-Norris</h2>
+            <p>Veja as frases mais populares do mestre Chuck-Norris</p>
+            <a href="#hero">Ver frases</a>
+          </div>
+          <img src="content/img/cards/chuck-norris.png" class="card-img" alt="Chuck Norris">
         </div>
       </section>
-      <section class="hero-section">
+      <section class="hero-section" id="hero">
         <div class="hero">
           <div class="hero-text-box">
-            <h1 class="hero-heading"></h1>
-            <p class="hero-description"></p>
-            <a href="#" class="hero-btn">Start</a>
+            <h1 class="hero-heading">Conselhos do mestre dos magos</h1>
+            <p class="hero-description">Navegantes, obtenha as melhores dicas e conselhos com o mestre de todos os magos.</p>
+            <button href="#" class="hero-btn" onclick="getData()">Receber conselho</button>
           </div>
           <div class="hero-img-box">
             <img src="#" class="hero-img" alt="Some text" />
+            <span class="advice"></span>
           </div>
         </div>
       </section>
@@ -46,5 +59,6 @@
       <section class="form-section"></section>
       <footer></footer>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
