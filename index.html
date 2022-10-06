@@ -4,61 +4,326 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <title>Infnet project</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/main-style.css" />
+    <link rel="stylesheet" href="css/cards-section.css" />
+    <link rel="stylesheet" href="css/hero-section.css" />
+    <link rel="stylesheet" href="css/chuck-norris-section.css" />
+    <link rel="stylesheet" href="css/comments-section.css" />
+    <link rel="stylesheet" href="css/support-section.css" />
+
+    <title>AT - HTML5 & CSS3</title>
   </head>
+
   <body>
     <main class="main-container">
+      <!--Header-->
       <header>
-        <a href="#"><img src="content/img/navbar/logo.png" class="logo" alt="Imagem do logotipo escrito INFNET"></img></a>
+        <h1>Conselhos e frases sensacionais</h1>
+      </header>
+      <!--Scroll button-->
+      <button onclick="topFunction()" id="scrollButton" title="Top">
+        <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+      </button>
+      <!--Navbar section-->
+      <section class="navbar">
+        <a href="https://www.infnet.edu.br/infnet/home/" target="_blank"
+          ><img
+            src="content/img/navbar/logo.png"
+            class="logo"
+            alt="Imagem do logotipo escrito INFNET"
+        /></a>
+        <a href="#" class="hamburguer-menu"><i class="fa-solid fa-bars"></i></a>
         <nav>
-          <ul>
-            <li><a href="#" data-text="Home" class="nav-menu">Home</a></li>
-            <li><a href="#" data-text="Conselhos" class="nav-menu">Conselhos</a></li>
-            <li><a href="#" data-text="Chuck-Norris" class="nav-menu">Chuck-Norris</a></li>
-            <li><a href="#" data-text="Comentários" class="nav-menu">Comentários</a></li>
-            <li><a href="#" class="hamburguer-menu"><i class="fa fa-bars"></i></a></li>
+          <ul class="nav-menu">
+            <li><a href="#hero" class="nav-item">Conselhos</a></li>
+            <li><a href="#chuck" class="nav-item">Chuck-Norris</a></li>
+            <li>
+              <a href="#comments-section" class="nav-item">Comentários</a>
+            </li>
+            <li><a href="#support-section" class="nav-item">Suporte</a></li>
           </ul>
         </nav>
-      </header>
+      </section>
+
+      <!--Cards section-->
       <section class="cards">
         <div class="card">
           <div class="card-content">
-            <h2>Conselhos</h2>
-            <p>Escute os melhores conselhos do mestre dos magos</p>
-            <a href="#hero">Receber conselhos</a>
+            <h2>Mestre dos Magos</h2>
+            <p>Escute os melhores conselhos do Mestre dos Magos</p>
           </div>
-          <img src="content/img/cards/mestredosmagos.png" class="card-img" alt="Mestre dos Magos">
+          <a href="#hero">
+            <img
+              src="content/img/cards/mestredosmagos.png"
+              class="card-img"
+              title="Mestre dos Magos"
+              alt="Uma caixa com uma imagem do Mestre dos Magos que direciona para a seção de conselhos"
+            />
+          </a>
         </div>
         <div class="card">
           <div class="card-content">
-            <h2>Frases do Chuck-Norris</h2>
+            <h2>Chuck-Norris</h2>
             <p>Veja as frases mais populares do mestre Chuck-Norris</p>
-            <a href="#hero">Ver frases</a>
           </div>
-          <img src="content/img/cards/chuck-norris.png" class="card-img" alt="Chuck Norris">
+          <a href="#chuck">
+            <img
+              src="content/img/cards/chuck-norris.png"
+              class="card-img"
+              title="Chuck Norris"
+              alt="Uma caixa com uma imagem do Chuck Norris que direciona para a seção de frases"
+            />
+          </a>
         </div>
       </section>
+
+      <!--Hero section-->
       <section class="hero-section" id="hero">
         <div class="hero">
           <div class="hero-text-box">
-            <h1 class="hero-heading">Conselhos do mestre dos magos</h1>
-            <p class="hero-description">Navegantes, obtenha as melhores dicas e conselhos com o mestre de todos os magos.</p>
-            <button href="#" class="hero-btn" onclick="getData()">Receber conselho</button>
+            <h2 class="hero-heading">Conselhos do Mestre dos Magos</h2>
+            <p class="hero-description">
+              Navegantes, obtenham as melhores dicas e conselhos com o mestre de
+              todos os magos.
+            </p>
+            <button class="hero-btn" onclick="getAdvice()">
+              Receber conselho
+            </button>
           </div>
           <div class="hero-img-box">
-            <img src="#" class="hero-img" alt="Some text" />
-            <span class="advice"></span>
+            <img
+              src="content/img/hero/mestredosmagosembrasado.png"
+              class="hero-img"
+              title="Mestre dos Magos indecente"
+              alt="Imagem do Mestre dos Magos fumando um cigarro"
+            />
+          </div>
+        </div>
+        <div id="advice" class="advice"></div>
+      </section>
+
+      <!--Chuck Norris section-->
+      <section class="chuck-section" id="chuck">
+        <div class="chuck">
+          <div class="chuck-img-box">
+            <img
+              src="content/img/hero/chuck-norris-2.png"
+              class="hero-img"
+              title="Chuck Norris"
+              alt="Chuck Norris apontando para você"
+            />
+          </div>
+          <div class="chuck-text-box">
+            <h2 class="chuck-heading">Chuck Norris</h2>
+            <p class="chuck-description">
+              Clique para visualizar as melhores frases de Chuck Norris.
+            </p>
+            <button class="chuck-btn" onclick="getPhrase()">Ver frase</button>
+          </div>
+        </div>
+        <div id="phrase" class="phrase"></div>
+      </section>
+
+      <!--Comments section-->
+      <section id="comments-section" class="comments-section">
+        <div class="comments">
+          <h2 class="comments-heading">Comentários dos usuários</h2>
+        </div>
+        <div class="comments-container">
+          <div class="comments-box">
+            <div class="box-top">
+              <div class="profile">
+                <div class="profile-img">
+                  <img
+                    src="content/img/comments/darth-vader.jpg"
+                    title="Darth Vader"
+                    alt="Imagem de perfil"
+                  />
+                </div>
+                <div class="nome-usuario">
+                  <strong>Darth Vader</strong>
+                  <span>@vaderdaweb</span>
+                </div>
+              </div>
+              <div class="review-star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div>
+              <p class="review">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
+                nam tenetur incidunt, praesentium quia beatae a quae asperiores
+                temporibus suscipit earum dicta repudiandae impedit
+                exercitationem sunt aliquam. Suscipit, enim voluptate?
+              </p>
+            </div>
+          </div>
+          <div class="comments-box">
+            <div class="box-top">
+              <div class="profile">
+                <div class="profile-img">
+                  <img
+                    src="content/img/comments/luke.webp"
+                    title="Luke Skywalker"
+                    alt="Imagem de perfil"
+                  />
+                </div>
+                <div class="nome-usuario">
+                  <strong>Luke Skywalker</strong>
+                  <span>@lukedaweb</span>
+                </div>
+              </div>
+              <div class="review-star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div>
+              <p class="review">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
+                nam tenetur incidunt, praesentium quia beatae a quae asperiores
+                temporibus suscipit earum dicta repudiandae impedit
+                exercitationem sunt aliquam. Suscipit, enim voluptate?
+              </p>
+            </div>
+          </div>
+          <div class="comments-box">
+            <div class="box-top">
+              <div class="profile">
+                <div class="profile-img">
+                  <img
+                    src="content/img/comments/chewbacca.jpg"
+                    title="Chewbacca"
+                    alt="Imagem de perfil"
+                  />
+                </div>
+                <div class="nome-usuario">
+                  <strong>Chewbacca</strong>
+                  <span>@chewbaccadaweb</span>
+                </div>
+              </div>
+              <div class="review-star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div>
+              <p class="review">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
+                nam tenetur incidunt, praesentium quia beatae a quae asperiores
+                temporibus suscipit earum dicta repudiandae impedit
+                exercitationem sunt aliquam. Suscipit, enim voluptate?
+              </p>
+            </div>
+          </div>
+          <div class="comments-box">
+            <div class="box-top">
+              <div class="profile">
+                <div class="profile-img">
+                  <img
+                    src="content/img/comments/leia.webp"
+                    title="Leia"
+                    alt="Imagem de perfil"
+                  />
+                </div>
+                <div class="nome-usuario">
+                  <strong>Leia</strong>
+                  <span>@leiadaweb</span>
+                </div>
+              </div>
+              <div class="review-star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div>
+              <p class="review">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
+                nam tenetur incidunt, praesentium quia beatae a quae asperiores
+                temporibus suscipit earum dicta repudiandae impedit
+                exercitationem sunt aliquam. Suscipit, enim voluptate?
+              </p>
+            </div>
           </div>
         </div>
       </section>
-      <section class="suport-institutes"></section>
-      <section class="magic-advices"></section>
-      <section class="grid-section"></section>
-      <section class="form-section"></section>
-      <footer></footer>
+
+      <!--Suport section-->
+      <div id="support-section" class="support-section">
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">Instituições apoiadoras do Projeto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="first-content">
+                <div class="suport-img-container">
+                  <img
+                    src="content/img/suport/infnet.jpg"
+                    class="suport-img"
+                    title="Infnet"
+                    alt="Logo do INFNET"
+                  />
+                </div>
+              </td>
+              <td class="second-content">
+                Este site é apoiado pelo Instituto INFNET.
+              </td>
+            </tr>
+            <tr>
+              <td class="first-content">
+                <div class="suport-img-container">
+                  <img
+                    src="content/img/suport/eu.jpg"
+                    class="suport-img"
+                    title="Eu mesmo"
+                    alt="Logo escrita 'eu mesmo'"
+                  />
+                </div>
+              </td>
+              <td class="second-content">Este site tem meu próprio apoio.</td>
+            </tr>
+            <tr>
+              <td class="first-content">
+                <div class="suport-img-container">
+                  <img
+                    src="content/img/suport/familia.jpg"
+                    class="suport-img"
+                    title="Minha família"
+                    alt="Logo escrita 'minha família'"
+                  />
+                </div>
+              </td>
+              <td class="second-content">
+                Este site também teve o suporte de toda a minha família.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </main>
-    <script src="script.js"></script>
+    <footer class="footer"></footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/scrollButton.js"></script>
   </body>
 </html>
